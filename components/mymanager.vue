@@ -19,14 +19,14 @@
             <img src="mymanagerphoto.svg" alt="">
         </div>
         <div class="mymanager__info">
-            <div class="mymanager__info-name">
+            <div class="mymanager__info-name aboutmanager">
                 Юрий Михайлов
             </div>
-            <div class="mymanager__info-number">
+            <div class="mymanager__info-number aboutmanager">
                 8(800)333-52-62
 
             </div>
-            <div class="mymanager__info-email">
+            <div class="mymanager__info-email aboutmanager">
                 abababa@gmail.com
 
             </div>
@@ -57,6 +57,7 @@
     font-size: 12px;
     font-weight: 400;
     color: #7F8086;
+    cursor: pointer;
 }
 
 .mymanager__info-number {
@@ -64,6 +65,7 @@
     font-weight: 400;
     color: #7F8086;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 
 .mymanager__info-name {
@@ -71,6 +73,23 @@
     font-weight: 600;
     color: #404040;
     margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.aboutmanager:after {
+	display: block;
+	left: 0;
+	width: 0;
+	height: 1px;
+    border-radius: 1px;
+	background-color: #404040;
+	content: "";
+	transition: width .2s ease-out; 
+}
+
+.aboutmanager:hover:after,
+.aboutmanager:focus:after {
+	width: 10px;
 }
 
 

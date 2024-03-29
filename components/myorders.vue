@@ -23,6 +23,7 @@
         </div>
         <div class="myorders__orders">
             <div class="myorders__orders-orders">
+                <img class="imgstatus" src="/orderstatusmod.svg" alt="">
                 <div class="myorders__orders-orders-num">
                     0000
                 </div>
@@ -37,6 +38,7 @@
                 </div>
             </div>
             <div class="myorders__orders-orders">
+                <img class="imgstatus" src="/orderstatusroad.svg" alt="">
                 <div class="myorders__orders-orders-num">
                     0001
                 </div>
@@ -51,6 +53,7 @@
                 </div>
             </div>
             <div class="myorders__orders-orders">
+                <img class="imgstatus" src="/orderstatuswaitpayment.svg" alt="">
                 <div class="myorders__orders-orders-num">
                     0002
                 </div>
@@ -65,6 +68,7 @@
                 </div>
             </div>
             <div class="myorders__orders-orders">
+                <img class="imgstatus" src="/orderstatuscomplete.svg" alt="">
                 <div class="myorders__orders-orders-num">
                     0003
                 </div>
@@ -94,6 +98,14 @@
 
 
 <style>
+
+.imgstatus {
+    left: 192px;
+    position: relative;
+    align-items: center;
+
+}
+
 
 .myorders__info-delsum {
     margin-left: 90px;
@@ -134,8 +146,10 @@ margin-left: -9px;
 }
 
 .myorders__button:hover {
-    background: #464646;
+    background:none;
     transition: .2s ease-out;
+    color: #404040;
+    border: 1px solid #404040;
 }
 
 .myorders__button {

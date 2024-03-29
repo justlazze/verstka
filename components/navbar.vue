@@ -180,6 +180,15 @@ transition: .2s;
 .nav-link {
     display: inline-block;
     margin-right: 32px;
+    line-height: 1  ;
+    margin-top: 1px;
+    transition: .2s ease-out;
+    
+}
+
+.nav-link:hover .navicons {
+    transform: scale(1.1);
+    transition: .2s ease-in;
     
 }
 
@@ -194,6 +203,7 @@ transition: .2s;
 a.navli {
     text-decoration: none;
     vertical-align: middle;
+    color: #404040;
 }
 
 .navicons {
@@ -201,5 +211,23 @@ a.navli {
     max-width: 24px;
     margin: 0;
     vertical-align: middle;
+    transition: .2s ease-in;
+}
+
+.nav-link a:after {
+	display: flex;
+	position: static;
+	right: 0;
+	width: 0;
+	height: 1px;
+	background-color: #404040;
+	content: "";
+	transition: width .2s ease-out; 
+    margin-left: 29px;
+}
+
+.nav-link a:hover:after,
+.nav-link a:focus:after {
+	width: 10px;
 }
 </style>
