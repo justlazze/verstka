@@ -23,7 +23,7 @@
         </div>
         <div class="myorders__orders">
             <div class="myorders__orders-orders">
-                <img class="imgstatus" src="/orderstatusmod.svg" alt="">
+                <!-- <img class="imgstatus" src="/orderstatusmod.svg" alt=""> -->
                 <div class="myorders__orders-orders-num">
                     0000
                 </div>
