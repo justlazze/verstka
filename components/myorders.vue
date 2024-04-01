@@ -5,81 +5,32 @@
         </div>
         <div class="myorders__info">
             <div class="myorder__info-numstat">
-            <div class="myorders__info-numstat-number">
                 Номер
             </div>
-            <div class="myorders__info-numstat-status">
+            <div class="myorder__info-numstat">
                 Статус
             </div>
-        </div>
-        <div class="myorder__info-randelsum">
-            <div class="myorders__info-ransum">
+            <div class="myorder__info-numstat">
                 Сумма выкупа
             </div>
-            <div class="myorders__info-delsum">
+            <div class="myorder__info-numstat">
                 Сумма доставки
             </div>
         </div>
-        </div>
         <div class="myorders__orders">
             <div class="myorders__orders-orders">
-                <!-- <img class="imgstatus" src="/orderstatusmod.svg" alt=""> -->
                 <div class="myorders__orders-orders-num">
                     0000
                 </div>
-                <div class="myorders__orders-orders-status">
+                <div class="myorders__orders-orders-num">
+                    <div class="myorders__orders-orders-status green"></div>
                     Модерация
                 </div>
-                <div class="myorders__orders-orders-ransum" style="color:#7F8086">
+                <div class="myorders__orders-orders-num">
                     Скоро
                 </div>
-                <div class="myorders__orders-orders-delsum" style="color:#7F8086">
+                <div class="myorders__orders-orders-num">
                     Скоро
-                </div>
-            </div>
-            <div class="myorders__orders-orders">
-                <img class="imgstatus" src="/orderstatusroad.svg" alt="">
-                <div class="myorders__orders-orders-num">
-                    0001
-                </div>
-                <div class="myorders__orders-orders-status">
-                    В пути по Китаю
-                </div>
-                <div class="myorders__orders-orders-ransum">
-                    51123₽
-                </div>
-                <div class="myorders__orders-orders-delsum">
-                    22745₽
-                </div>
-            </div>
-            <div class="myorders__orders-orders">
-                <img class="imgstatus" src="/orderstatuswaitpayment.svg" alt="">
-                <div class="myorders__orders-orders-num">
-                    0002
-                </div>
-                <div class="myorders__orders-orders-status">
-                    Ожидание оплаты товара
-                </div>
-                <div class="myorders__orders-orders-ransum">
-                    203455 ₽ 
-                </div>
-                <div class="myorders__orders-orders-delsum">
-                    140234₽
-                </div>
-            </div>
-            <div class="myorders__orders-orders">
-                <img class="imgstatus" src="/orderstatuscomplete.svg" alt="">
-                <div class="myorders__orders-orders-num">
-                    0003
-                </div>
-                <div class="myorders__orders-orders-status">
-                    Выполнен
-                </div>
-                <div class="myorders__orders-orders-ransum">
-                    143523₽
-                </div>
-                <div class="myorders__orders-orders-delsum">
-                    122234₽
                 </div>
             </div>
         </div>
@@ -88,14 +39,6 @@
         </div>
     </div>
 </template>
-
-
-
-
-
-
-
-
 
 <style>
 
@@ -120,8 +63,22 @@
 }
 
 .myorder__info-numstat {
-    display: flex;
-    justify-content: space-between;
+
+}
+
+.myorder__info-numstat:nth-child(1) {
+    flex: 1 1 340px;
+}
+
+.myorder__info-numstat:nth-child(2) {
+    flex: 1 1 397px;
+}
+.myorder__info-numstat:nth-child(3) {
+    flex: 1 1 250px;
+}
+.myorder__info-numstat:nth-child(4) {
+    flex: 1 1 250px;
+    text-align: right;
 }
 
 
@@ -132,13 +89,39 @@
 }
 
 .myorders__orders-orders-status {
-width: 193px;
-margin-left: -9px;
+    height: 12px;
+    width: 2px;
+    border-radius: 100px;
+    flex: none;
+    margin-right: 8px;
+}
+
+.myorders__orders-orders-status.green {
+    background: linear-gradient(to bottom, #6EAD63 0%, #86DE76 100%);
 }
 
 .myorders__orders-orders-num {
-    width: 195px;
-    
+    display: flex;
+    align-items: center;
+}
+
+.myorders__orders-orders-num:nth-child(1) {
+    flex: 1 1 340px;
+}
+
+.myorders__orders-orders-num:nth-child(2) {
+    flex: 1 1 397px;
+}
+.myorders__orders-orders-num:nth-child(3) {
+    flex: 1 1 250px;
+}
+.myorders__orders-orders-num:nth-child(4) {
+    flex: 1 1 250px;
+    text-align: right;
+}
+
+.myorders__orders-orders-num.gray {
+    color: gray;
 }
 
 .myorders__orders {

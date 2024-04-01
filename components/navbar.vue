@@ -1,8 +1,4 @@
 <template>
-
-
-   
-
     <div class="navbar">
         <AppContainer>
                     <div class="brand-logo"> 
@@ -36,26 +32,7 @@
                     </li>
                     
                 </ul>
-                <div class="navbar__profile">
-                    <div class="navbar__profile-photo">
-                        <img src="navbarphoto.svg" alt="">
-                    </div>
-                    <div class="navbar__profile-info">
-                        <div class="navbar__profile-name">
-                            Oleg K.
-                        </div>
-                        <div class="navbar__profile-id">
-                            ID: 000001
-                        </div>
-
-                    </div>
-                    <div class="navbar__profile-row">
-                        <img src="/navbarprofilerow.svg" alt="">
-
-                    </div>
-
-                </div>
-                
+                <HeaderProfile />
             </div>
             </AppContainer>
         </div>
@@ -73,64 +50,13 @@ export default {
     }
 
 }
-
 </script>
 
-
 <style>
-.navbar__profile-row {
-    transition: .2s ease-out;
-}
-
-.navbar__profile:hover .navbar__profile-row {
-    transition: .2s;
-    transform: scale(1.1);
-
-}
-
-
-.navbar__profile-info {
-    margin-left: 12px;
-    flex: auto;
-}
-
-.navbar__profile-id {
-    font-size: 12px;
-    font-weight: 400;
-    color: #7F8086;
-}
-
-.navbar__profile-name {
-    font-size: 14px;
-    color: #404040;
-    font-weight: 600;
-}
-
-.navbar__profile-photo img {
-    display: block;
-}
 
 .navbar {
     display: flex;
     justify-content: center;
-}
-
-.navbar__profile {
-    width: 213px;
-    height: 46px;
-    background: #F8F8F8;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    cursor: pointer;
-    transition: .2s;
-
-
-}
-.navbar__profile:hover {
-background: #eeeeee;
-transition: .2s;
 }
 
 .navbar .app-container {
@@ -143,9 +69,6 @@ transition: .2s;
     justify-content: space-between;
 }
 
-
-
-
 .brand-logo {
     width: 166px;
     align-content: space-between;
@@ -153,28 +76,21 @@ transition: .2s;
     align-items: center;
     vertical-align: middle;
     margin-top: 2px;
-    
-
 }
+
 .brand-logo:hover {
-
     cursor: pointer;
-    
-
 }
 
 .nav-items {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
-
 }
 
 .nav-link.profile {
     display: inline-block;
     margin-right: 0px;
-    
 }
 
 .nav-link {
@@ -183,22 +99,16 @@ transition: .2s;
     line-height: 1  ;
     margin-top: 1px;
     transition: .2s ease-out;
-    
 }
 
 .nav-link:hover .navicons {
     transform: scale(1.1);
     transition: .2s ease-in;
-    
 }
-
-
 
 .nav-item {
     text-decoration: none;
-
 }
-
 
 a.navli {
     text-decoration: none;
