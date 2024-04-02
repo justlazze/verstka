@@ -61,11 +61,6 @@
 .myorder__info-randelsum {
     display: flex;
 }
-
-.myorder__info-numstat {
-
-}
-
 .myorder__info-numstat:nth-child(1) {
     flex: 1 1 340px;
 }

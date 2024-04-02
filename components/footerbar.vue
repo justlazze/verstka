@@ -11,7 +11,7 @@
                     Сервис по выкупу и доставки из Китая
                     </div>
                     <div class="footer_nav-block-menu-logoandinfo-rights footerbtn">
-                        © 2024 ChinaSpace. Все права защищены.
+                        <a href="">© 2024 ChinaSpace. Все права защищены.</a>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@
                     Мои заказы
                 </div>
                 <div class="footer__nav-block-menu-docs footerbtn">
-                    Правовая документация
+                    <a href="">Правовая документация</a>
                 </div>
 
             </div>
@@ -48,7 +48,7 @@
                     Помощь и обучение
                 </div>
                 <div class="footer__nav-block-menu-offer footerbtn">
-                    Публичная оферта
+                    <a href="">Публичная оферта</a>
                 </div>
             </div>
             <div class="footer__nav-block3">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="footer__nav-block3-policy footerbtn">
-                    Политика конфиденциальности
+                    <a href="">Политика конфиденциальности</a>
                 </div>
             </div>
         </div>

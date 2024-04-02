@@ -1,5 +1,5 @@
 <template>
-<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle">
+<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle" >
     <div class="navbar__profile-photo">
         <img src="navbarphoto.svg" alt="">
     </div>
@@ -16,7 +16,7 @@
             <path d="M4 6L8 10L12 6" stroke="#404040" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </div>
-    <div class="navbar__profile-menu">
+    <div v-click-outside="externalClick" class="navbar__profile-menu">
         <div class="navbar__profile-menu-btns">
             <div class="navbar__profile-menu-btns-btn">
                     <svg class="stroke" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,8 +95,12 @@
 </template>
 
 <script>
+import vClickOutside from 'v-click-outside'
 
 export default {
+    directives: {
+      clickOutside: vClickOutside.directive
+    },
     data() {
         return {
             isShow: false,
@@ -111,9 +115,13 @@ export default {
         },
         hide() {
             this.isShow = false
-        }
+        },
+        externalClick (event) {
+
+      }
     }
-}
+  };
+
 </script>
 
 <style lang="scss" scoped>
@@ -128,20 +136,21 @@ export default {
     cursor: pointer;
     position: relative;
     z-index: 10;
-    transition: .2s ease-out;
+    transition: .2s ease;
     $root: &;
     &:hover {
         background: #eeeeee;
         transition: .2s;
         #{$root} {
-            &info-row {
-                transition: .2s;
+            &-info-row {
+                transition: .2s ease;
             }
         }
     }
     &.opened {
         height: auto;
         border-radius: 8px 8px 0 0;
+        cursor: default;
         filter: drop-shadow(0px 1px 5.7px rgba(69, 69, 69, 0.2));
         .navbar__profile-info-row {
             transform: scale(-1);
@@ -153,6 +162,7 @@ export default {
         #{$root} {
             &-menu {
                 display: block;
+                transition: 2s;
             }
         }
     }
@@ -213,35 +223,34 @@ export default {
     &-menu a {
         text-decoration: none;
         color: #404040;
+        transition: .2s ease;
     }
 
     &-info {
-        &-row {
-        transition: .2s ease-out;
-        }
+                margin-left: 12px;
+                flex: auto;
+    
+            &-id {
+                font-size: 12px;
+                font-weight: 400;
+                color: #7F8086;
+    }
+            &-name {
+                font-size: 14px;
+                color: #404040;
+                font-weight: 600;
+            }
+    }
+            &-photo img {
+            display: block;
     }
 
         
     
-    &-info {
-        margin-left: 12px;
-        flex: auto;
-    }
-    &-info-id {
-        font-size: 12px;
-        font-weight: 400;
-        color: #7F8086;
-    }
-    &-info-name {
-        font-size: 14px;
-        color: #404040;
-        font-weight: 600;
-    }
-    &-info-photo {
-        img {
-            display: block;
-        }
-    }
+
+
+  
+
     &-menu {
         position: absolute;
         top: 100%;
@@ -252,6 +261,8 @@ export default {
         display: none;
         width: 100%;
         cursor: default;
+        transition: .3s ease-in-out;
+        
         
         &-exit .navbar__profile-menu-btns-btn {
             margin-bottom: 4px;
@@ -268,19 +279,22 @@ export default {
             color: #7F8086;
             font-size: 12px;
             font-weight: 400;
-
+            margin-bottom: 12px;
             &:hover a {
                 color: black;
             }
         }
         &-account {
-            background: #F8F8F8;
+            background: white;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            padding: 4px;
             opacity: 50%;
             margin-top: 4px;
+            padding: 8px;
+            margin-left: 4px;
+            margin-right: 4px;
+
 
             &-info {
                 margin-left: 12px;
@@ -295,13 +309,12 @@ export default {
                 font-size: 14px;
                 color: #404040;
                 font-weight: 600;
+            }
     }
-            &-photo {
-                img {
-                display: block;
-        }
+            &-photo img {
+            display: block;
     }
-}
+
         }
            
         }
