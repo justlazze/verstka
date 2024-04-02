@@ -136,8 +136,8 @@ export default {
 
 .blacksquare:hover {
     cursor: pointer;
-    background-color: #464646;
-    transition: .2s ease-out;
+    filter: brightness(1.1);
+    transition: .2s ease;
     
 }
 

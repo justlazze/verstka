@@ -84,10 +84,13 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 2px;
+    transition: .2s ease;
 }
 
 .brand-logo:hover {
     cursor: pointer;
+    filter: brightness(1.1);
+    transition: .2s ease;
 }
 
 .nav-items {

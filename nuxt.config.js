@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Сервис доставки из китая | CHINASPACE',
+    title: 'Сервис доставки из китая | ChinaSpace',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
