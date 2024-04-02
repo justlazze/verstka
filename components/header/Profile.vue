@@ -134,7 +134,7 @@ export default {
         background: #eeeeee;
         transition: .2s;
         #{$root} {
-            &-row {
+            &info-row {
                 transition: .2s;
             }
         }
@@ -252,7 +252,7 @@ export default {
         display: none;
         width: 100%;
         cursor: default;
-
+        
         &-exit .navbar__profile-menu-btns-btn {
             margin-bottom: 4px;
         }
@@ -270,7 +270,7 @@ export default {
             font-weight: 400;
 
             &:hover a {
-                color: #404040;
+                color: black;
             }
         }
         &-account {

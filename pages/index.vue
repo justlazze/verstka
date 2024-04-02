@@ -35,7 +35,6 @@ export default {
 <style>
 
 
-
 .rightsidegrid {
   display: flex;
   margin: -10px;

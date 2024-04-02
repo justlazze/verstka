@@ -3,10 +3,8 @@
   
   
   <main>
-  <div>
     <navbar />
   <Nuxt />
-  </div>
   <footerbar />
   </main>
 </template>

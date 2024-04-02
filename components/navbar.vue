@@ -65,14 +65,15 @@ export default {
 .navbar {
     display: flex;
     justify-content: center;
+        margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 .navbar .app-container {
     margin: 0 auto;
     display: flex;
     height: 46px;
-    margin-top: 20px;
-    margin-bottom: 60px;
+
     align-items: center;
     justify-content: space-between;
 }
@@ -111,19 +112,23 @@ export default {
 
 .nav-link:hover .navicons {
     transform: scale(1.1);
-    transition: .2s ease-in;
+    transition: .3s ease;
 }
 
 .nav-item {
     text-decoration: none;
 }
 
-a.navli {
-    text-decoration: none;
-    vertical-align: middle;
-    color: #404040;
+.nav-link a {
+    border-radius: 8px;
+    color: var(--color-black);
+    cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+    padding: 8px 6px;
+    text-decoration: none;
+    transition: .3s ease;
+    white-space: nowrap;
 }
 
 .navicons {
@@ -131,23 +136,10 @@ a.navli {
     max-width: 24px;
     margin: 0;
     vertical-align: middle;
-    transition: .2s ease-in;
+    transition: .3s ease;
 }
 
-.nav-link a:after {
-	display: flex;
-	position: static;
-	right: 0;
-	width: 0;
-	height: 1px;
-	background-color: #404040;
-	content: "";
-	transition: width .2s ease-out; 
-    margin-left: 29px;
-}
-
-.nav-link a:hover:after,
-.nav-link a:focus:after {
-	width: 10px;
+.nav-link:hover a {
+    background: #F2F2F2;
 }
 </style>
