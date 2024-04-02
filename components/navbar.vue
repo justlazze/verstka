@@ -65,7 +65,7 @@ export default {
 .navbar {
     display: flex;
     justify-content: center;
-        margin-top: 20px;
+    margin-top: 20px;
     margin-bottom: 60px;
 }
 
@@ -83,7 +83,6 @@ export default {
     align-content: space-between;
     display: flex;
     align-items: center;
-    vertical-align: middle;
     margin-top: 2px;
 }
 
@@ -137,6 +136,8 @@ export default {
     margin: 0;
     vertical-align: middle;
     transition: .3s ease;
+    margin-top: -3px;
+    
 }
 
 .nav-link:hover a {
