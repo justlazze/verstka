@@ -3,31 +3,39 @@
         <AppContainer>
                     <div class="brand-logo"> 
                 <a href="/">
-                    <img src="navbrandlogo.svg" alt="">
+                    <img src="navbrandlogo.svg" alt="На главную">
                 </a>
 
             </div>
             <div class="nav-items">
                 <ul class="nav-item">
                     <li class="nav-link">
-                        <img src="/navneworderico.svg" alt="" class="navicons">
+                        
 
                         
-                        <a href="#" class="navli">Новый заказ</a>
+                        <a href="#" class="navli">
+                            <img src="/navneworderico.svg" alt="" class="navicons">
+                            Новый заказ</a>
                     </li>
                     <li class="nav-link">
-                        <img src="/navordersico.svg" alt="" class="navicons">
+                        
 
-                        <a href="orders" class="navli">Заказы</a>
+                        <a href="orders" class="navli">
+                            <img src="/navordersico.svg" alt="" class="navicons">
+                            Заказы</a>
                     </li>
                     <li class="nav-link">
-                        <img src="/navnotifico.svg" alt="" class="navicons">
+                        
 
-                        <a href="#" class="navli">Уведомления</a>
+                        <a href="#" class="navli">
+                            <img src="/navnotifico.svg" alt="" class="navicons">
+                            Уведомления</a>
                     </li>
                     <li class="nav-link">
-                        <img src="/navhelpico.svg" alt="" class="navicons">
-                        <a href="#" class="navli">Помощь</a>
+                        
+                        <a href="#" class="navli">
+                            <img src="/navhelpico.svg" alt="" class="navicons">
+                            Помощь</a>
                         
                     </li>
                     
@@ -114,6 +122,8 @@ a.navli {
     text-decoration: none;
     vertical-align: middle;
     color: #404040;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .navicons {

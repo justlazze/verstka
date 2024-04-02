@@ -222,7 +222,7 @@
     display: flex;
     flex: column;
     justify-content: space-between;
-    padding: 16px;
+    margin-top: 16px;
 }
 
 .footer {
