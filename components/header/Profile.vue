@@ -1,5 +1,5 @@
 <template>
-<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle" >
+<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle" v-click-outside="externalClick">
     <div class="navbar__profile-photo">
         <img src="navbarphoto.svg" alt="">
     </div>
@@ -16,7 +16,7 @@
             <path d="M4 6L8 10L12 6" stroke="#404040" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </div>
-    <div v-click-outside="externalClick" class="navbar__profile-menu">
+    <div class="navbar__profile-menu" @click.stop>
         <div class="navbar__profile-menu-btns">
             <div class="navbar__profile-menu-btns-btn">
                     <svg class="stroke" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
 </svg>
 
 
-                <a href="#">Мои заказы</a>
+                <a href="/orders">Мои заказы</a>
             </div>
             <div class="navbar__profile-menu-btns-btn">
                 <svg class="fill" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,8 @@ export default {
             this.isShow = false
         },
         externalClick (event) {
-
+            this.isShow = false
+            
       }
     }
   };
