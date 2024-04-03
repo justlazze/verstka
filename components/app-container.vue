@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
 .app-container {
     max-width: 1200px;
     width: 100%;

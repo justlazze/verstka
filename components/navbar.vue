@@ -116,6 +116,28 @@
                                         </svg>
                                     </div>
                                     </div>
+                                    <div class="notifylayer__orders-order">
+                                        <div class="notifylayer__orders-order-checkbox">
+                                        <input type="checkbox">
+                                        </div>
+                                       <div class="notifylayer__orders-order-line grey"></div>
+                                       <div class="notifylayer__orders-order-info">
+                                        <div class="notifylayer__orders-order-info-title">
+                                            Обновление платформы: узнайте как мы изменили интерфейс и какие функции теперь доступны
+                                            </div>
+                                            <div class="notifylayer__orders-order-info-date">
+                                                10.07.2023
+                                            </div>
+                                            <div class="notifylayer__orders-order-info-btn">
+                                                Перейти
+                                        </div>
+                                        </div>
+                                        <div class="notifylayer__orders-order-deletebtn">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    </div>
                                 </div>
                                 <div class="notifylayer__footer">
                                     <div class="notifylayer__footer-btns">
@@ -126,6 +148,12 @@
                                             Очистить все
                                         </div>
                                     </div>
+                                </div>
+                                <div class="notifylayer__closebtn" @click="hide">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L11 11M1 11L11 1" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    
                                 </div>
                             </div>
                     </li>
@@ -193,10 +221,14 @@ export default {
     border-radius: 16px;
     z-index: 10;
     display: none;
-    width: 390%;
+    width: 390.5%;
     cursor: default;
     transition: .2s ease-out;
     padding: 24px;
+
+    
+    
+
     &.opened {
         transition: 5s;
         display: block;
@@ -204,6 +236,29 @@ export default {
         cursor: default;
         filter: drop-shadow(0px 1px 5.7px rgba(69, 69, 69, 0.2));
     }
+
+    &__closebtn {
+
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 12px;
+        right: 9px;
+        cursor: pointer;
+        & svg {
+            margin-left: 6px;
+            margin-top: 6px;
+            & path {
+                transition: .2s ease;
+            }
+        }
+        &:hover svg path {
+            stroke: #404040;
+            transition: .2s ease;
+        }
+            
+    }
+        
 
 
     &__footer {
@@ -213,6 +268,7 @@ export default {
         margin-left: -24px;
         margin-bottom: -24px;
         margin-top: 24px;
+        bottom: 0px;
 
         &-btns {
             display: flex;
@@ -229,6 +285,38 @@ export default {
     }
 
     &__orders {
+        
+        // overflow-y: scroll;
+
+        // &::-webkit-scrollbar {
+        //     width: 4px;
+        //     height: 100%;
+
+            
+
+
+            
+        //     &-thumb:vertical {   
+        //         background: #8B8C92;
+        //         width: 4px;
+        //         height: 2px;
+        //         border-radius: 50px;
+        //     }
+        //     &-track:vertical {
+        //         background: #ECECEC;
+        //         width: 6px;
+        //         border-radius: 50px;
+        //         height: 248px;
+                
+
+        //     }
+            
+
+        // }
+
+        
+
+
         &-order {
             display: flex;
             margin-top: 8px;
@@ -255,25 +343,24 @@ export default {
             }
 
             &-deletebtn {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            top: 0px;
-            right: 0px;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            & svg {
-                & path {
-                    transition: .2s ease;
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                top: 0px;
+                right: 0px;
+                & svg { 
+                    margin: 4.67px;        
+                    & path {
+                        transition: .2s ease;
+                    }
                 }
-            }
-            &:hover svg path {
-                    stroke: #404040;
-                    transition: .2s ease;
-                }
+                &:hover svg path {
+                        stroke: #404040;
+                        transition: .2s ease;
+                    }
             
-        }
+            }
             
             &-info {
                 padding-right: 28px;
