@@ -1,5 +1,5 @@
 <template>
-<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle" v-click-outside="externalClick">
+<div class="navbar__profile" :class="{'opened': isShow}" @click="toggle" v-click-outside="hide">
     <div class="navbar__profile-photo">
         <img src="navbarphoto.svg" alt="">
     </div>
@@ -116,16 +116,16 @@ export default {
         hide() {
             this.isShow = false
         },
-        externalClick (event) {
-            this.isShow = false
-            
-      }
+        
     }
   };
 
 </script>
 
 <style lang="scss" scoped>
+
+
+
 .navbar__profile {
     width: 213px;
     height: 46px;
@@ -153,6 +153,7 @@ export default {
         border-radius: 8px 8px 0 0;
         cursor: default;
         filter: drop-shadow(0px 1px 5.7px rgba(69, 69, 69, 0.2));
+        transition: .5s ease-out;
         .navbar__profile-info-row {
             transform: scale(-1);
             transition: .2s ease-out;
@@ -163,7 +164,6 @@ export default {
         #{$root} {
             &-menu {
                 display: block;
-                transition: 2s;
             }
         }
     }
@@ -262,7 +262,8 @@ export default {
         display: none;
         width: 100%;
         cursor: default;
-        transition: .3s ease-in-out;
+        transition: .5s ease-out;
+        
         
         
         &-exit .navbar__profile-menu-btns-btn {
