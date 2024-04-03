@@ -53,7 +53,7 @@
                                         <div class="notifylayer__orders-order-checkbox">
                                        <input type="checkbox">
                                     </div>
-                                       <div class="notifylayer__orders-order-line"></div>
+                                       <div class="notifylayer__orders-order-line green"></div>
                                         <div class="notifylayer__orders-order-info">
                                             <div class="notifylayer__orders-order-info-title">
                                                 Изменения в статусе заказа X-0123-010
@@ -76,7 +76,7 @@
                                         <div class="notifylayer__orders-order-checkbox">
                                         <input type="checkbox">
                                     </div>
-                                       <div class="notifylayer__orders-order-line"></div>
+                                       <div class="notifylayer__orders-order-line grey"></div>
                                        <div class="notifylayer__orders-order-info">
                                         <div class="notifylayer__orders-order-info-title">
                                             Акция: поделись промокодом и получили скидку 10% на второй заказ
@@ -98,7 +98,7 @@
                                         <div class="notifylayer__orders-order-checkbox">
                                         <input type="checkbox">
                                         </div>
-                                       <div class="notifylayer__orders-order-line"></div>
+                                       <div class="notifylayer__orders-order-line grey"></div>
                                        <div class="notifylayer__orders-order-info">
                                         <div class="notifylayer__orders-order-info-title">
                                             Обновление платформы: узнайте как мы изменили интерфейс и какие функции теперь доступны
@@ -198,6 +198,7 @@ export default {
     transition: .2s ease-out;
     padding: 24px;
     &.opened {
+        transition: 5s;
         display: block;
         height: auto;
         cursor: default;
@@ -221,6 +222,8 @@ export default {
                 color: #FFFFFF;
                 font-size: 12px;
                 font-weight: 600;
+                cursor: pointer;
+                
             }
         }
     }
@@ -232,14 +235,23 @@ export default {
             padding-bottom: 9px;
             border-bottom: #F2F2F2 solid 1px;
             position: relative;
+
             &-line {
                 height: auto;
                 width: 2px;
-                background: linear-gradient(to top, #86DE76, #6EAD63);
                 margin-right: 12px;
                 margin-left: 12px;
                 border-radius: 1px;
+                &.green {
+                    background: linear-gradient(to top, #86DE76, #6EAD63);
+                }
+                &.grey {
+                    background: linear-gradient(272.1deg, #DCDBDB 49.02%, #B2B2B2 98.23%);
+                }
                 
+            }
+            & input {
+                cursor: pointer;
             }
 
             &-deletebtn {
@@ -264,7 +276,7 @@ export default {
         }
             
             &-info {
-                margin-right: 50px;
+                padding-right: 28px;
                 &-title {
                     color: #404040;
                     font-size: 12px;
@@ -282,6 +294,7 @@ export default {
                     font-size: 12px;
                     font-weight: 600;
                     margin-top: 8px;
+                    cursor: pointer;
                 }
             }
         }
