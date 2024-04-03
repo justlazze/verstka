@@ -65,9 +65,11 @@
                                                 Перейти
                                         </div>
                                         </div>
+                                        <div class="notifylayer__orders-order-deletebtn">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
+                                    </div>
 
                                     </div>
                                     <div class="notifylayer__orders-order">
@@ -86,10 +88,11 @@
                                             Перейти
                                         </div>
                                         </div>
+                                        <div class="notifylayer__orders-order-deletebtn">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-
+                                    </div>
                                     </div>
                                     <div class="notifylayer__orders-order">
                                         <div class="notifylayer__orders-order-checkbox">
@@ -107,10 +110,11 @@
                                                 Перейти
                                         </div>
                                         </div>
+                                        <div class="notifylayer__orders-order-deletebtn">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="notifylayer__footer">
@@ -237,19 +241,28 @@ export default {
                 border-radius: 1px;
                 
             }
+
+            &-deletebtn {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 0px;
+            right: 0px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
             & svg {
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                cursor: pointer;
                 & path {
                     transition: .2s ease;
                 }
-                &:hover path{
+            }
+            &:hover svg path {
                     stroke: #404040;
                     transition: .2s ease;
                 }
-            }
+            
+        }
+            
             &-info {
                 margin-right: 50px;
                 &-title {
