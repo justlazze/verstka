@@ -1,0 +1,15 @@
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 100%;
+    &-thumb:vertical {
+        background: #8b8c92;
+        width: 4px;
+        height: 2px;
+        border-radius: 50px;
+        border: 1px solid #ececec;
+    }
+    &-track:vertical {
+        background: #ececec;
+        border-radius: 50px;
+    }
+}

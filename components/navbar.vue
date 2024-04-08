@@ -1,244 +1,343 @@
 <template>
     <div class="navbar">
         <AppContainer>
-                    <div class="brand-logo"> 
-                <a href="/">
-                    <img src="navbrandlogo.svg" alt="На главную">
-                </a>
-
+            <div class="brand-logo">
+                <nuxt-link to="/">
+                    <img src="navbrandlogo.svg" alt="На главную" />
+                </nuxt-link>
             </div>
             <div class="nav-items">
                 <ul class="nav-item">
                     <li class="nav-link">
-                        
-
-                        
                         <a href="#" class="navli">
-                            <img src="/navneworderico.svg" alt="" class="navicons">
-                            Новый заказ</a>
+                            <img
+                                src="/navneworderico.svg"
+                                alt=""
+                                class="navicons"
+                            />
+                            Новый заказ</a
+                        >
                     </li>
                     <li class="nav-link">
-                        
-
-                        <a href="orders" class="navli">
-                            <img src="/navordersico.svg" alt="" class="navicons">
-                            Заказы</a>
+                        <nuxt-link :to="{name: 'orders'}" class="navli">
+                            <img
+                                src="/navordersico.svg"
+                                alt=""
+                                class="navicons"
+                            />
+                            Заказы
+                        </nuxt-link>
                     </li>
-                    <li class="nav-link notifybutton"  @click="toggle" v-click-outside="hide">
-                        
-
-                        <a :class="{'active' : isShow}" href="#" class="navli">
-                            <img src="/navnotifico.svg" alt="" class="navicons">
-                            Уведомления</a>
-                            <div class="notifylayer" :class="{'opened': isShow}" @click.stop>
-                                <div class="title">
-                                    Уведомления
+                    <li
+                        class="nav-link notifybutton"
+                        @click="toggle"
+                        v-click-outside="hide"
+                    >
+                        <a :class="{ active: isShow }" href="#" class="navli">
+                            <img
+                                src="/navnotifico.svg"
+                                alt=""
+                                class="navicons"
+                            />
+                            Уведомления</a
+                        >
+                        <div
+                            class="notifylayer"
+                            :class="{ opened: isShow }"
+                            @click.stop
+                        >
+                            <div class="title">Уведомления</div>
+                            <div class="notifylayer__btns">
+                                <div class="notifylayer__btns-btn">Все</div>
+                                <div class="notifylayer__btns-btn">
+                                    Сообщения
                                 </div>
-                                <div class="notifylayer__btns">
-                                    <div class="notifylayer__btns-btn">
-                                        Все
-                                    </div>
-                                    <div class="notifylayer__btns-btn">
-                                        Сообщения
-                                    </div>
-                                    <div class="notifylayer__btns-btn">
-                                        Заказы
-                                    </div>
-                                    <div class="notifylayer__btns-btn">
-                                        Акции
-                                    </div>
-                                </div>
-                                <div class="notifylayer__orders">
+                                <div class="notifylayer__btns-btn">Заказы</div>
+                                <div class="notifylayer__btns-btn">Акции</div>
+                            </div>
+                            <div class="notifylayer__orders">
+                                <template v-for="item of 3">
                                     <div class="notifylayer__orders-order">
-                                        <div class="notifylayer__orders-order-checkbox">
-                                       <input type="checkbox">
-                                    </div>
-                                       <div class="notifylayer__orders-order-line green"></div>
+                                        <div
+                                            class="notifylayer__orders-order-checkbox"
+                                        >
+                                            <input type="checkbox" />
+                                        </div>
+                                        <div
+                                            class="notifylayer__orders-order-line green"
+                                        ></div>
                                         <div class="notifylayer__orders-order-info">
-                                            <div class="notifylayer__orders-order-info-title">
-                                                Изменения в статусе заказа X-0123-010
+                                            <div
+                                                class="notifylayer__orders-order-info-title"
+                                            >
+                                                Изменения в статусе заказа
+                                                X-0123-010
                                             </div>
-                                            <div class="notifylayer__orders-order-info-date">
+                                            <div
+                                                class="notifylayer__orders-order-info-date"
+                                            >
                                                 04.08.2023
                                             </div>
-                                            <div class="notifylayer__orders-order-info-btn">
+                                            <div
+                                                class="notifylayer__orders-order-info-btn"
+                                            >
                                                 Перейти
+                                            </div>
                                         </div>
+                                        <div
+                                            class="notifylayer__orders-order-deletebtn"
+                                        >
+                                            <svg
+                                                width="8"
+                                                height="8"
+                                                viewBox="0 0 8 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016"
+                                                    stroke="#D4D4D4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
                                         </div>
-                                        <div class="notifylayer__orders-order-deletebtn">
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
-
                                     </div>
                                     <div class="notifylayer__orders-order">
-                                        <div class="notifylayer__orders-order-checkbox">
-                                        <input type="checkbox">
-                                    </div>
-                                       <div class="notifylayer__orders-order-line grey"></div>
-                                       <div class="notifylayer__orders-order-info">
-                                        <div class="notifylayer__orders-order-info-title">
-                                            Акция: поделись промокодом и получили скидку 10% на второй заказ
+                                        <div
+                                            class="notifylayer__orders-order-checkbox"
+                                        >
+                                            <input type="checkbox" />
                                         </div>
-                                        <div class="notifylayer__orders-order-info-date">
-                                            24.07.2023
+                                        <div
+                                            class="notifylayer__orders-order-line grey"
+                                        ></div>
+                                        <div class="notifylayer__orders-order-info">
+                                            <div
+                                                class="notifylayer__orders-order-info-title"
+                                            >
+                                                Акция: поделись промокодом и
+                                                получили скидку 10% на второй заказ
                                             </div>
-                                        <div class="notifylayer__orders-order-info-btn">
-                                            Перейти
+                                            <div
+                                                class="notifylayer__orders-order-info-date"
+                                            >
+                                                24.07.2023
+                                            </div>
+                                            <div
+                                                class="notifylayer__orders-order-info-btn"
+                                            >
+                                                Перейти
+                                            </div>
                                         </div>
+                                        <div
+                                            class="notifylayer__orders-order-deletebtn"
+                                        >
+                                            <svg
+                                                width="8"
+                                                height="8"
+                                                viewBox="0 0 8 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016"
+                                                    stroke="#D4D4D4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
                                         </div>
-                                        <div class="notifylayer__orders-order-deletebtn">
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
                                     </div>
                                     <div class="notifylayer__orders-order">
-                                        <div class="notifylayer__orders-order-checkbox">
-                                        <input type="checkbox">
+                                        <div
+                                            class="notifylayer__orders-order-checkbox"
+                                        >
+                                            <input type="checkbox" />
                                         </div>
-                                       <div class="notifylayer__orders-order-line grey"></div>
-                                       <div class="notifylayer__orders-order-info">
-                                        <div class="notifylayer__orders-order-info-title">
-                                            Обновление платформы: узнайте как мы изменили интерфейс и какие функции теперь доступны
+                                        <div
+                                            class="notifylayer__orders-order-line grey"
+                                        ></div>
+                                        <div class="notifylayer__orders-order-info">
+                                            <div
+                                                class="notifylayer__orders-order-info-title"
+                                            >
+                                                Обновление платформы: узнайте как мы
+                                                изменили интерфейс и какие функции
+                                                теперь доступны
                                             </div>
-                                            <div class="notifylayer__orders-order-info-date">
+                                            <div
+                                                class="notifylayer__orders-order-info-date"
+                                            >
                                                 10.07.2023
                                             </div>
-                                            <div class="notifylayer__orders-order-info-btn">
+                                            <div
+                                                class="notifylayer__orders-order-info-btn"
+                                            >
                                                 Перейти
+                                            </div>
                                         </div>
+                                        <div
+                                            class="notifylayer__orders-order-deletebtn"
+                                        >
+                                            <svg
+                                                width="8"
+                                                height="8"
+                                                viewBox="0 0 8 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016"
+                                                    stroke="#D4D4D4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
                                         </div>
-                                        <div class="notifylayer__orders-order-deletebtn">
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
                                     </div>
                                     <div class="notifylayer__orders-order">
-                                        <div class="notifylayer__orders-order-checkbox">
-                                        <input type="checkbox">
+                                        <div
+                                            class="notifylayer__orders-order-checkbox"
+                                        >
+                                            <input type="checkbox" />
                                         </div>
-                                       <div class="notifylayer__orders-order-line grey"></div>
-                                       <div class="notifylayer__orders-order-info">
-                                        <div class="notifylayer__orders-order-info-title">
-                                            Обновление платформы: узнайте как мы изменили интерфейс и какие функции теперь доступны
+                                        <div
+                                            class="notifylayer__orders-order-line grey"
+                                        ></div>
+                                        <div class="notifylayer__orders-order-info">
+                                            <div
+                                                class="notifylayer__orders-order-info-title"
+                                            >
+                                                Обновление платформы: узнайте как мы
+                                                изменили интерфейс и какие функции
+                                                теперь доступны
                                             </div>
-                                            <div class="notifylayer__orders-order-info-date">
+                                            <div
+                                                class="notifylayer__orders-order-info-date"
+                                            >
                                                 10.07.2023
                                             </div>
-                                            <div class="notifylayer__orders-order-info-btn">
+                                            <div
+                                                class="notifylayer__orders-order-info-btn"
+                                            >
                                                 Перейти
+                                            </div>
                                         </div>
+                                        <div
+                                            class="notifylayer__orders-order-deletebtn"
+                                        >
+                                            <svg
+                                                width="8"
+                                                height="8"
+                                                viewBox="0 0 8 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016"
+                                                    stroke="#D4D4D4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
                                         </div>
-                                        <div class="notifylayer__orders-order-deletebtn">
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
                                     </div>
+                                </template>
+                            </div>
+                            <div class="notifylayer__footer">
+                                <div class="notifylayer__footer-btns">
+                                    <div class="notifylayer__footer-btns-btn">
+                                        Отметить все как прочитанное
                                     </div>
-                                </div>
-                                <div class="notifylayer__footer">
-                                    <div class="notifylayer__footer-btns">
-                                        <div class="notifylayer__footer-btns-btn">
-                                            Отметить все как прочитанное
-                                        </div>
-                                        <div class="notifylayer__footer-btns-btn">
-                                            Очистить все
-                                        </div>
+                                    <div class="notifylayer__footer-btns-btn">
+                                        Очистить все
                                     </div>
-                                </div>
-                                <div class="notifylayer__closebtn" @click="hide">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1L11 11M1 11L11 1" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    
                                 </div>
                             </div>
+                            <div class="notifylayer__closebtn" @click="hide">
+                                <svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 12 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M1 1L11 11M1 11L11 1"
+                                        stroke="#D4D4D4"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-link">
-                        
                         <a href="#" class="navli">
-                            <img src="/navhelpico.svg" alt="" class="navicons">
-                            Помощь</a>
-                        
+                            <img
+                                src="/navhelpico.svg"
+                                alt=""
+                                class="navicons"
+                            />
+                            Помощь</a
+                        >
                     </li>
-                    
                 </ul>
                 <HeaderProfile />
             </div>
-            </AppContainer>
-        </div>
-    
-    
+        </AppContainer>
+    </div>
 </template>
 
 <script>
-import vClickOutside from 'v-click-outside'
 import AppContainer from "~/components/app-container.vue"
+
 export default {
     components: {
-        AppContainer},
-    props: {
-        
+        AppContainer,
     },
-    directives: {
-      clickOutside: vClickOutside.directive
-    },
+    props: {},
     data() {
         return {
             isShow: false,
-        }
+        };
     },
     methods: {
         toggle() {
-            this.isShow = !this.isShow
+            this.isShow = !this.isShow;
         },
         show() {
-            this.isShow = true
+            this.isShow = true;
         },
         hide() {
-            this.isShow = false
+            this.isShow = false;
         },
-        
-    }
-    
-
-}
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-
-
-
-
 .notifylayer {
     position: absolute;
     top: 40px;
     left: 0;
-    background: #F8F8F8;
+    background: #f8f8f8;
     border-radius: 16px;
     z-index: 10;
-    display: none;
-    width: 390.5%;
-    cursor: default;
-    transition: .2s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    // max-width: 480px;
+    min-width: 480px;
+    transition: .3s ease-out;
     padding: 24px;
-
-    
-    
-
     &.opened {
-        transition: 5s;
-        display: block;
+        opacity: 1;
+        pointer-events: all;
         height: auto;
-        cursor: default;
         filter: drop-shadow(0px 1px 5.7px rgba(69, 69, 69, 0.2));
     }
-
     &__closebtn {
-
         position: absolute;
         width: 24px;
         height: 24px;
@@ -249,79 +348,50 @@ export default {
             margin-left: 6px;
             margin-top: 6px;
             & path {
-                transition: .2s ease;
+                transition: 0.2s ease;
             }
         }
         &:hover svg path {
             stroke: #404040;
-            transition: .2s ease;
+            transition: 0.2s ease;
         }
-            
     }
-        
-
-
     &__footer {
-        background: radial-gradient(126.26% 557.1% at 7.88% 95.89%, #AE72B3 0%, #A17ACC 20.17%, #837DCC 62.2%, #697EC8 100%);
+        background: radial-gradient(
+            126.26% 557.1% at 7.88% 95.89%,
+            #ae72b3 0%,
+            #a17acc 20.17%,
+            #837dcc 62.2%,
+            #697ec8 100%
+        );
         border-radius: 0px 0px 16px 16px;
         margin-right: -24px;
         margin-left: -24px;
         margin-bottom: -24px;
         margin-top: 24px;
         bottom: 0px;
-
         &-btns {
             display: flex;
             justify-content: space-between;
             padding: 24px;
             &-btn {
-                color: #FFFFFF;
+                color: #ffffff;
                 font-size: 12px;
                 font-weight: 600;
                 cursor: pointer;
-                
             }
         }
     }
-
     &__orders {
-        
-        // overflow-y: scroll;
-
-        // &::-webkit-scrollbar {
-        //     width: 4px;
-        //     height: 100%;
-
-            
-
-
-            
-        //     &-thumb:vertical {   
-        //         background: #8B8C92;
-        //         width: 4px;
-        //         height: 2px;
-        //         border-radius: 50px;
-        //     }
-        //     &-track:vertical {
-        //         background: #ECECEC;
-        //         width: 6px;
-        //         border-radius: 50px;
-        //         height: 248px;
-                
-
-        //     }
-            
-
-        // }
-
-        
-
-
+        overflow-y: scroll;
+        max-height: 218px;
+        margin-right: -16px;
+        padding-right: 10px;
         &-order {
             display: flex;
             margin-top: 8px;
             padding-bottom: 9px;
-            border-bottom: #F2F2F2 solid 1px;
+            border-bottom: #f2f2f2 solid 1px;
             position: relative;
 
             &-line {
@@ -331,12 +401,15 @@ export default {
                 margin-left: 12px;
                 border-radius: 1px;
                 &.green {
-                    background: linear-gradient(to top, #86DE76, #6EAD63);
+                    background: linear-gradient(to top, #86de76, #6ead63);
                 }
                 &.grey {
-                    background: linear-gradient(272.1deg, #DCDBDB 49.02%, #B2B2B2 98.23%);
+                    background: linear-gradient(
+                        272.1deg,
+                        #dcdbdb 49.02%,
+                        #b2b2b2 98.23%
+                    );
                 }
-                
             }
             & input {
                 cursor: pointer;
@@ -349,19 +422,24 @@ export default {
                 cursor: pointer;
                 top: 0px;
                 right: 0px;
-                & svg { 
-                    margin: 4.67px;        
-                    & path {
-                        transition: .2s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    svg {
+                        path {
+                            stroke: #404040;
+                        }
                     }
                 }
-                &:hover svg path {
-                        stroke: #404040;
-                        transition: .2s ease;
+                svg {
+                    display: block;
+                    path {
+                        transition: 0.2s ease;
                     }
-            
+                }
             }
-            
+
             &-info {
                 padding-right: 28px;
                 &-title {
@@ -371,7 +449,7 @@ export default {
                     line-height: 15.6px;
                 }
                 &-date {
-                    color: #7F8086;
+                    color: #7f8086;
                     font-size: 10px;
                     font-weight: 400;
                     margin-top: 8px;
@@ -398,23 +476,21 @@ export default {
         margin-bottom: 16px;
         &-btn {
             padding: 8px 16px 8px 16px;
-            border: 1px solid #D4D4D4;
+            border: 1px solid #d4d4d4;
             border-radius: 8px;
             font-size: 12px;
             font-weight: 600;
             margin-right: 4px;
             cursor: pointer;
-            transition: .2s ease;
+            transition: 0.2s ease;
             &:hover {
                 background: #404040;
                 border: 1px solid #404040;
-                color: #FBFBFB;
-                transition: .2s ease;
+                color: #fbfbfb;
+                transition: 0.2s ease;
             }
-
         }
     }
-
 }
 
 .notifybutton {
@@ -443,13 +519,13 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 2px;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
 .brand-logo:hover {
     cursor: pointer;
     filter: brightness(1.1);
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
 .nav-items {
@@ -463,19 +539,10 @@ export default {
     margin-right: 0px;
 }
 
-.nav-link {
-    display: inline-block;
-    margin-right: 32px;
-    line-height: 1  ;
-    margin-top: 1px;
-    transition: .2s ease-out;
-
-
-}
 
 .nav-link:hover .navicons {
     transform: scale(1.1);
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .nav-item {
@@ -490,30 +557,38 @@ export default {
     font-weight: 600;
     padding: 8px 6px;
     text-decoration: none;
-    transition: .3s ease;
+    transition: 0.3s ease;
     white-space: nowrap;
+    &.nuxt-link-exact-active {
+        background: #f2f2f2;
+    }
 }
 
-.navicons {
-    max-height: 24px;
-    max-width: 24px;
-    margin: 0;
-    vertical-align: middle;
-    transition: .3s ease;
-    margin-top: -3px;
-    
+.nav-link {
+    display: inline-block;
+    margin-right: 32px;
+    transition: 0.2s ease-out;
+    .navicons {
+        flex: none;
+        margin-right: 10px;
+        transition: 0.3s ease;
+    }
+    &.active {
+        .navicons {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+    }
+    &:hover a,
+    a {
+        &.active {
+            background: #f2f2f2;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.nav-link:hover a {
-    background: #F2F2F2;
-}
-
-.nav-link a.active{
-    background: #F2F2F2;
-}
-
-.nav-link .active .navicons {
-    transform: scale(1.1);
-    transition: .3s ease;
-}
 </style>
