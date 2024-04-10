@@ -144,7 +144,7 @@ export default {
         transition: .2s;
         #{$root} {
             &-info-row {
-                transition: .2s ease;
+                transition: .3s ease-out;
             }
         }
     }
@@ -153,7 +153,7 @@ export default {
         border-radius: 8px 8px 0 0;
         cursor: default;
         filter: drop-shadow(0px 1px 5.7px rgba(69, 69, 69, 0.2));
-        transition: .5s ease-out;
+        transition: .2s ease-out;
         .navbar__profile-info-row {
             transform: scale(-1);
             transition: .2s ease-out;
@@ -163,7 +163,10 @@ export default {
         }
         #{$root} {
             &-menu {
-                display: block;
+                opacity: 1;
+                pointer-events: all;
+                transition: .2s ease;
+                
             }
         }
     }
@@ -259,10 +262,11 @@ export default {
         background: #F8F8F8;
         border-radius: 0 0 8px 8px;
         z-index: 10;
-        display: none;
         width: 100%;
         cursor: default;
-        transition: .5s ease-out;
+        transition: .3s ease-out;
+        opacity: 0;
+        pointer-events: none;
         
         
         

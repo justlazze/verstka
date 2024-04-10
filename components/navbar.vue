@@ -150,9 +150,7 @@
                                         </div>
                                     </div>
                                     <div class="notifylayer__orders-order">
-                                        <div
-                                            class="notifylayer__orders-order-checkbox"
-                                        >
+                                        <div class="notifylayer__orders-order-checkbox">
                                             <input type="checkbox" />
                                         </div>
                                         <div
