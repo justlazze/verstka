@@ -153,44 +153,25 @@
                                         <div class="notifylayer__orders-order-checkbox">
                                             <input type="checkbox" />
                                         </div>
-                                        <div
-                                            class="notifylayer__orders-order-line grey"
-                                        ></div>
+                                        <div class="notifylayer__orders-order-line grey">
+                                        </div>
                                         <div class="notifylayer__orders-order-info">
-                                            <div
-                                                class="notifylayer__orders-order-info-title"
-                                            >
+                                            <div class="notifylayer__orders-order-info-title">
                                                 Обновление платформы: узнайте как мы
                                                 изменили интерфейс и какие функции
                                                 теперь доступны
                                             </div>
-                                            <div
-                                                class="notifylayer__orders-order-info-date"
-                                            >
+                                            <div class="notifylayer__orders-order-info-date">
                                                 10.07.2023
                                             </div>
                                             <div
-                                                class="notifylayer__orders-order-info-btn"
-                                            >
+                                                class="notifylayer__orders-order-info-btn">
                                                 Перейти
                                             </div>
                                         </div>
-                                        <div
-                                            class="notifylayer__orders-order-deletebtn"
-                                        >
-                                            <svg
-                                                width="8"
-                                                height="8"
-                                                viewBox="0 0 8 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016"
-                                                    stroke="#D4D4D4"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
+                                        <div class="notifylayer__orders-order-deletebtn">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.666016 0.666016L7.33268 7.33268M0.666016 7.33268L7.33268 0.666016" stroke="#D4D4D4" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </div>
                                     </div>
@@ -355,13 +336,7 @@ export default {
         }
     }
     &__footer {
-        background: radial-gradient(
-            126.26% 557.1% at 7.88% 95.89%,
-            #ae72b3 0%,
-            #a17acc 20.17%,
-            #837dcc 62.2%,
-            #697ec8 100%
-        );
+        background: radial-gradient(126.26% 557.1% at 7.88% 95.89%, 0%, 20.17%, 62.2%, 100%);
         border-radius: 0px 0px 16px 16px;
         margin-right: -24px;
         margin-left: -24px;
