@@ -235,5 +235,9 @@
     margin-top: 90px;
 }
 
+a {
+    text-decoration: none;
+    color: #404040;
+}
 
 </style>

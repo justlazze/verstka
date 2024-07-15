@@ -147,6 +147,13 @@ export default {
     transform: scale(0.9);
     transition: .2s ease-out;
 }
+.blacksquare:hover img {
+    transform: scale(1.2);
+    transition: .2s ease-out;
+}
+.blacksquare img {
+    transition: .2s ease-out;
+}
 
 
 
